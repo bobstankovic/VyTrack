@@ -10,12 +10,12 @@ Scenario Outline: user should be able to log in:
 
   Examples:
   |user|
-  |user185|
-  |user186|
-  |storemanager219|
-  |storemanager220|
-  |salesmanager282|
-  |salesmanager283|
+  |user183|
+  |user184|
+  |storemanager216|
+  |storemanager217|
+  |salesmanager279|
+  |salesmanager280|
 
 
   Scenario: user should not be able to login with wrong email
