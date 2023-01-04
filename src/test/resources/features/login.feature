@@ -1,13 +1,26 @@
-Feature: Login feature
+@smoke
+Feature: Login positive and negative
 
-  @librarian
-  Scenario: Login as a librarian
-    Given I am on the login page
-    When I login as a librarian
-    Then dashboard should be displayed
 
-  @student
-  Scenario: Login as a student
-    Given I am on the login page
-    When I login as a student
-    Then books should be displayed
+Scenario Outline: user should be able to log in:
+  Given user is on login page
+  When user enter "<user>"
+  Then user should be on home page
+  And user logOut
+
+  Examples:
+  |user|
+  |user185|
+  |user186|
+  |storemanager219|
+  |storemanager220|
+  |salesmanager282|
+  |salesmanager283|
+
+
+  Scenario: user should not be able to login with wrong email
+    Given user is on login page
+    When user enter "bob59@cybertekschool.com"
+    Then error message shows
+
+

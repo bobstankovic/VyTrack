@@ -1,6 +1,7 @@
-package com.cydeo.library.step_definitions;
+package com.cydeo.vTrack.step_definitions;
 
-import com.cydeo.library.utilities.Driver;
+import com.cydeo.vTrack.pages.MainPage;
+import com.cydeo.vTrack.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
@@ -8,6 +9,7 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
+    MainPage mainPage = new MainPage();
     @After
     public void teardownScenario(Scenario scenario){
 
@@ -18,5 +20,6 @@ public class Hooks {
 
         Driver.closeDriver();
     }
+
 
 }
